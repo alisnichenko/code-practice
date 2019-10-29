@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
     // char **planets1 = {"Mercury", "Earth"};
     
     // getting a file handle
-    pFile = fopen("planets.txt". "w");
+    pFile = fopen("planets.txt", "w");
     if (pFile == NULL) {
         printf("Error opening the file\n");
         return 1;
