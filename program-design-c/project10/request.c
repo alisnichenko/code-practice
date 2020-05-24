@@ -56,7 +56,15 @@ struct request *append_to_list(struct request *list){
     return list;
 }
 
-//function to update a child details
+// a function to delete a node from linked list
+struct request* delete_from_list(struct request *list) {
+    char classroom[ROOM_LEN];
+    char first[NAME_LEN];
+    char last[NAME_LEN];
+    
+}
+
+// function to update a child details
 void update(struct request *list) {
     char classroom[ROOM_LEN];
     char first[NAME_LEN + 1];
@@ -114,6 +122,28 @@ void clearList(struct request *list) {
         free(list);
         list = next;
     }
+
+
+
+
+
+
+    struct node *findLast = NULL;
+    struct node *current = list;
+    if (current == NULL) {
+        printf("No element was found\n");
+        return;
+    }
+
+    for (; current != NULL; current = current->next) {
+        if (current->value == ourValue) {
+            findLast = current;
+        }
+    } 
+
+    return findLast;
+
+
 }
 
 // function for error exit
